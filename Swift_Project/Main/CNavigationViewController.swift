@@ -1,0 +1,31 @@
+//
+//  NavigationViewController.swift
+//  Swift_Project
+//
+//  Created by lvzheng on 2020/4/12.
+//  Copyright © 2020 lvzheng. All rights reserved.
+//
+
+import UIKit
+
+class CNavigationViewController: UINavigationController {
+
+   override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: true)
+        if children.count > 1 {
+            viewController.hidesBottomBarWhenPushed = true;
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(backAction));
+        }
+    }
+    
+    @objc func backAction() {
+        popViewController(animated: true);
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let bar = UINavigationBar.appearance()
+        bar.tintColor = UIColor.black
+        bar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 17), .foregroundColor: UIColor.black];
+    }
+}

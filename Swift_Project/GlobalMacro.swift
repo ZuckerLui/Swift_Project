@@ -17,4 +17,9 @@ enum ScreenSize {
     static let width = UIScreen.main.bounds.size.width
     static let height = UIScreen.main.bounds.size.height
     static let statusBarHeight = UIApplication.shared.statusBarFrame.height
+    static let bottomSafeHeight = CGFloat(34)
+    static let topAreaHeight = statusBarHeight + 44
+    static let bottomAreaHetght = CGFloat(34.0 + 49.0)
+    static let haveBottomHeight = height - topAreaHeight - bottomAreaHetght
+    static let noBottomHeight = height - topAreaHeight - 34.0
 }

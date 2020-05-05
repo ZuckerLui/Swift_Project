@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		09EFC1A632E8B96C83053244 /* Pods_Swift_ProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50AE3C43E9993C491D0EF5A /* Pods_Swift_ProjectTests.framework */; };
 		0E7984B90BCDAE623CB8DF80 /* Pods_Swift_ProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F903A8787B5BD2C49A6BB74 /* Pods_Swift_ProjectUITests.framework */; };
+		9503405824596F8A000F7FF7 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9503405724596F8A000F7FF7 /* PageView.swift */; };
 		950A6C2A24528B4E008E5EB7 /* CustomerRealmTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950A6C2924528B4E008E5EB7 /* CustomerRealmTool.swift */; };
 		951594662446EE880075F3A1 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951594652446EE880075F3A1 /* LoginManager.swift */; };
 		951886D624567B870067686E /* ProtocolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951886D524567B870067686E /* ProtocolView.swift */; };
+		95216D482461520E0061D3DC /* HomeTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216D472461520E0061D3DC /* HomeTableview.swift */; };
+		95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95393B1D24597A6F00AD6B43 /* UIView+Extension.swift */; };
 		953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF0FE2445C1DF0082D838 /* CyclePicturePlayView.swift */; };
+		95401CC024592207003496D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95401CBF24592207003496D6 /* TitleView.swift */; };
 		95494B1F243F1D41007B7DEE /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B15243F1D41007B7DEE /* SVRadialGradientLayer.m */; };
 		95494B20243F1D41007B7DEE /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B18243F1D41007B7DEE /* SVProgressAnimatedView.m */; };
 		95494B21243F1D41007B7DEE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B1B243F1D41007B7DEE /* SVProgressHUD.m */; };
@@ -66,10 +70,14 @@
 		6415557EAAF8950BEE52903B /* Pods-Swift_ProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_ProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_ProjectUITests/Pods-Swift_ProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6856E5E3E8E905EFD6EE488E /* Pods-Swift_ProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_ProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_ProjectTests/Pods-Swift_ProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		8F903A8787B5BD2C49A6BB74 /* Pods_Swift_ProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_ProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9503405724596F8A000F7FF7 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		950A6C2924528B4E008E5EB7 /* CustomerRealmTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRealmTool.swift; sourceTree = "<group>"; };
 		951594652446EE880075F3A1 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		951886D524567B870067686E /* ProtocolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolView.swift; sourceTree = "<group>"; };
+		95216D472461520E0061D3DC /* HomeTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableview.swift; sourceTree = "<group>"; };
+		95393B1D24597A6F00AD6B43 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		953BF0FE2445C1DF0082D838 /* CyclePicturePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePicturePlayView.swift; sourceTree = "<group>"; };
+		95401CBF24592207003496D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		95494B12243F1614007B7DEE /* Project_Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_Bridge.h; sourceTree = "<group>"; };
 		95494B15243F1D41007B7DEE /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		95494B16243F1D41007B7DEE /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
@@ -276,6 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				95F940282443135A0001E506 /* HomeViewController.swift */,
+				95401CBF24592207003496D6 /* TitleView.swift */,
+				9503405724596F8A000F7FF7 /* PageView.swift */,
+				95216D472461520E0061D3DC /* HomeTableview.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -311,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				95FC0DBE243DA1FB002E77A3 /* UIColor+Extension.swift */,
+				95393B1D24597A6F00AD6B43 /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -598,6 +610,7 @@
 				953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */,
 				951886D624567B870067686E /* ProtocolView.swift in Sources */,
 				95F94023244311410001E506 /* CNavigationViewController.swift in Sources */,
+				95216D482461520E0061D3DC /* HomeTableview.swift in Sources */,
 				95494B26243F2810007B7DEE /* RequestManager.swift in Sources */,
 				95FD9C3E244042F3008FA954 /* NetWorkBaseModel.swift in Sources */,
 				951594662446EE880075F3A1 /* LoginManager.swift in Sources */,
@@ -606,6 +619,9 @@
 				95FB552D2451825700261F1E /* DataBaseManager.swift in Sources */,
 				95FC0DBC243D9DA1002E77A3 /* SceneDelegate.swift in Sources */,
 				95FC0B082441C25B005DBD7B /* YSendArticelAPI.swift in Sources */,
+				9503405824596F8A000F7FF7 /* PageView.swift in Sources */,
+				95401CC024592207003496D6 /* TitleView.swift in Sources */,
+				95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */,
 				95494B22243F1D41007B7DEE /* SVIndefiniteAnimatedView.m in Sources */,
 				95494B21243F1D41007B7DEE /* SVProgressHUD.m in Sources */,
 				95FC0DC2243DB21B002E77A3 /* LoginTextFieldView.swift in Sources */,

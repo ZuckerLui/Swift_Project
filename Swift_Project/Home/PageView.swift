@@ -14,7 +14,17 @@ typealias scrollBlock = (_ newY: CGFloat) -> Void
 
 class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
     var currentTableView = UITableView()
-    var superCanScroll = false
+    // 子tableView能否滑动
+    private var _subCanScroll: Bool = false
+    var subCanScroll: Bool{
+        set {
+            _subCanScroll = newValue
+        }
+        
+        get {
+            return _subCanScroll
+        }
+    }
     var scrollBlock: scrollBlock?
     var fingerIsTouch = false
     
@@ -54,12 +64,17 @@ class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
 
 extension PageView {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: pageViewCellIdentifier)!
-        cell.textLabel?.text = "dsadasdas"
+        if indexPath.row == 49 {
+            cell.textLabel?.text = "the last one"
+        } else {
+            cell.textLabel?.text = "dsadasdas"
+        }
+        
         return cell
     }
     
@@ -72,17 +87,11 @@ extension PageView {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if !self.superCanScroll {
+        if !self.subCanScroll {
             scrollView.contentOffset = CGPoint.zero
+            return
         }
-        if scrollView.contentOffset.y <= 0 {
-//            if !self.fingerIsTouch {
-//                return
-//            }
-            self.superCanScroll = false
-            scrollView.contentOffset = CGPoint.zero;
-            NotificationCenter.default.post(name: NSNotification.Name("leaveTop"), object: nil)
-        }
+        self.scrollBlock?(scrollView.contentOffset.y)
     }
 }
 

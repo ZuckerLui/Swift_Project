@@ -16,7 +16,7 @@ class TitleView: UIScrollView {
         self.init(frame: frame)
         self.titles = titles
         self.showsHorizontalScrollIndicator = false
-        
+        self.backgroundColor = .white
         let contentWidth = CGFloat(titles.count * 100)
         if  contentWidth > frame.width {
             self.contentSize = CGSize(width: contentWidth, height: 0)

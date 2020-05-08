@@ -8,16 +8,17 @@
 
 import UIKit
 
-let tableViewCellIdentifier = "tableViewCellIdentifier"
+let homeTableViewCellIdentifier = "homeTableViewCellIdentifier"
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var cyclePictureView: CyclePicturePlayView?
     var pageView: PageView?
-    var canScroll: Bool = true
+    // 父 tableView 能否滑动
+    var superCanScroll: Bool = true
     
     let pictures: [String] = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg"]
-    let titles: [String] = ["aaa", "bbb", "ccc", "ddd", "fff"]
+    let titles: [String] = ["精选", "热点", "同城", "哈哈", "通知"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func changeScrollStatus() -> Void {
-        self.canScroll = true
-        self.pageView?.superCanScroll = false
+        self.superCanScroll = true
     }
     
     func requestData() {
@@ -47,7 +47,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cyclePictureView = CyclePicturePlayView.init(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.width * 0.6), pictures: pictures)
         tableView.tableHeaderView = cyclePictureView
         tableView.showsVerticalScrollIndicator = false
-        pageView = PageView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: tableView.height - 45), count: 5)
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: homeTableViewCellIdentifier)
+//        pageView = PageView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height), count: titles.count)
         tableView.tableFooterView = pageView
         pageView?.scrollBlock = {[weak self] (newY) in
            
@@ -60,16 +61,30 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 extension HomeViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ScreenSize.height + 1000
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: homeTableViewCellIdentifier) as! HomeTableViewCell
+        self.pageView = cell.pageView
+        self.pageView?.scrollBlock = { (offsetY) in
+            if offsetY > 0 {
+                self.superCanScroll = false
+            } else {
+                self.superCanScroll = true
+            }
+        }
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionHeaderView = TitleView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: 45), titles: ["精选", "热点", "同城", "哈哈", "通知"])
+        let sectionHeaderView = TitleView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: 45), titles: titles)
         return sectionHeaderView
     }
     
@@ -80,17 +95,17 @@ extension HomeViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // 第0组的最上面
         let sectionTop = self.tableView.rect(forSection: 0).origin.y
-        if scrollView.contentOffset.y >= sectionTop { // 偏移量到达第0组的最上面时
-            // 让父tableview的偏移量永远等于sectionTop
-            scrollView.contentOffset = CGPoint(x: 0, y: sectionTop)
-            if self.canScroll {
-                self.canScroll = false;
-                self.pageView?.superCanScroll = true;
-            }
+        
+        if scrollView.contentOffset.y >= sectionTop {
+            self.pageView?.subCanScroll = true
+            scrollView.bounces = false
         } else {
-            if !self.canScroll {//子cell没到顶
+            self.pageView?.subCanScroll = false
+            scrollView.bounces = true
+            if !self.superCanScroll {
                 scrollView.contentOffset = CGPoint(x: 0, y: sectionTop);
             }
         }
     }
 }
+

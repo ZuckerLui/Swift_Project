@@ -31,7 +31,7 @@ class RequestManager: NSObject {
 /** 外部调用方法 */
 extension RequestManager {
     func requestByTargetType<T: Mappable>(targetType: YAPITargetType,
-                                          path: YSendArticelPath,
+                                          path: NetworkPath,
                                           model: T.Type,
                                           success: @escaping NetSuccessBlock<T>,
                                           failed: @escaping NetFailedBlock) -> Void {

@@ -29,11 +29,11 @@ class LoginViewController: UIViewController {
         self.view.addSubview(titleLabel)
         
         userNameTF = LoginTextFieldView(frame: .zero, placeholder: "请输入用户名", isSecureTextEntry: false, keyboardType: .namePhonePad)
-        userNameTF.textField.text = "18520870003"
+        userNameTF.textField.text = "15800000003"
         self.view.addSubview(userNameTF!)
         
         passwordTF = LoginTextFieldView(frame: .zero, placeholder: "请输入密码", isSecureTextEntry: true, keyboardType: .default)
-        passwordTF.textField.text = "870003"
+        passwordTF.textField.text = "000003"
         self.view.addSubview(passwordTF!)
         
         loginBtn.setTitle("登录", for: UIControl.State.normal)
@@ -76,14 +76,15 @@ class LoginViewController: UIViewController {
         let dic = ["memberCellphone": userNameTF.content(),
                    "loginPwd": passwordTF.content()]
         RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postArticel(params: dic),
-                                                 path: YSendArticelPath.login,
+                                                 path: .login,
                                                  model: YNormalModel.self,
                                                  success:
             { [weak self] (response, json) in
-            LoginManager.share.currentUser = userModel.init(JSON: response.data!)
+            LoginManager.share.currentUser = userModel.deserialize(from: response.data)
             self?.jumpMainPage()
         }) { (error) in
             SVProgressHUD.showError(withStatus: error.message)
+            self.jumpMainPage()
         }
     }
     
@@ -92,7 +93,7 @@ class LoginViewController: UIViewController {
         keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
         keyWindow?.rootViewController = CTabBarViewController()
         keyWindow?.makeKeyAndVisible()
-        DataBaseManager.share.configRealm()
+//        DataBaseManager.share.configRealm()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

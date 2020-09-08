@@ -13,6 +13,7 @@ target 'Swift_Project' do
   pod 'ObjectMapper', '~> 3.5.1'
   pod 'AlamofireImage', '3.6.0'
   pod 'RealmSwift', '4.1.0'
+  pod 'HandyJSON', '5.0.0'
   
   target 'Swift_ProjectTests' do
     inherit! :search_paths

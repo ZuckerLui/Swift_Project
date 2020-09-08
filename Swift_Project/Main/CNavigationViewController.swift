@@ -13,8 +13,8 @@ class CNavigationViewController: UINavigationController {
    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: true)
         if children.count > 1 {
-            viewController.hidesBottomBarWhenPushed = true;
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back"), style: .done, target: self, action: #selector(backAction));
+//            viewController.hidesBottomBarWhenPushed = true;
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_icon"), style: .done, target: self, action: #selector(backAction));
         }
     }
     

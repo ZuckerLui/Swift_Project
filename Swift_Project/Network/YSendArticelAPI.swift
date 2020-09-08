@@ -15,7 +15,7 @@ enum YSendArticelAPI {
     case postNoHud(params:Dictionary<String, Any>)
 }
 
-enum YSendArticelPath: String {
+enum NetworkPath: String {
     case login = "/sapp/sapp-api/notfilter/member/login"
     case home_banner = "/sapp/sapp-api/banner/getIndexBanner" ///获取首页轮播图片
 }

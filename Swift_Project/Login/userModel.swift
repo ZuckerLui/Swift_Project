@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import ObjectMapper
+import HandyJSON
 
-class userModel: Mappable {
+class userModel: HandyJSON {
     var provinceName: String?
     var uid: String?
     var signature: String?
@@ -17,21 +17,18 @@ class userModel: Mappable {
     var trueName: String?
     var token: String?
     var cellphone: String?
+    var ID: String?
+    var mapTest: String?
     
-    
-    
-    required init?(map: Map) {
+    required init() {
         
     }
     
-    func mapping(map: Map) {
-        provinceName <- map["provinceName"]
-        uid <- map["uid"]
-        signature <- map["signature"]
-        idCard <- map["idCard"]
-        trueName <- map["trueName"]
-        token <- map["token"]
-        cellphone <- map["cellphone"]
+    func mapping(mapper: HelpingMapper) {
+        mapper <<<
+            self.ID <-- "id"
+        mapper <<<
+            self.mapTest <-- "maptest"
     }
     
 }

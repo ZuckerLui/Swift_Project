@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func requestData() {
         RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postNoHud(params: [:]),
-                                                 path: YSendArticelPath.home_banner,
+                                                 path: .home_banner,
                                                  model: YNormalModel.self,
                                                  success: { (response, json) in
              debugPrint(json)

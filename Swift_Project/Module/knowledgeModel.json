@@ -1,0 +1,37 @@
+[
+    {
+        "sectionTitle": "基础语法",
+        "subModules": [
+            {
+                "moduleName":"闭包",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"module2",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName3",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName4",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName5",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName6",
+                "controller": "Swift_Project.ClosuresViewController"
+            }
+        ]
+    },
+    {
+        "sectionTitle": "基础语法",
+        "subModules": []
+    }
+    
+]
+

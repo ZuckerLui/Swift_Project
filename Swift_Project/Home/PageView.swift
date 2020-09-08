@@ -15,16 +15,7 @@ typealias scrollBlock = (_ newY: CGFloat) -> Void
 class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
     var currentTableView = UITableView()
     // 子tableView能否滑动
-    private var _subCanScroll: Bool = false
-    var subCanScroll: Bool{
-        set {
-            _subCanScroll = newValue
-        }
-        
-        get {
-            return _subCanScroll
-        }
-    }
+    var subCanScroll: Bool = false
     var scrollBlock: scrollBlock?
     var fingerIsTouch = false
     

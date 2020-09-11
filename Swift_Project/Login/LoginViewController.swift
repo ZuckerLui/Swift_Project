@@ -73,19 +73,20 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginAction(button: UIButton) {
-        let dic = ["memberCellphone": userNameTF.content(),
-                   "loginPwd": passwordTF.content()]
-        RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postArticel(params: dic),
-                                                 path: .login,
-                                                 model: YNormalModel.self,
-                                                 success:
-            { [weak self] (response, json) in
-            LoginManager.share.currentUser = userModel.deserialize(from: response.data)
-            self?.jumpMainPage()
-        }) { (error) in
-            SVProgressHUD.showError(withStatus: error.message)
-            self.jumpMainPage()
-        }
+        self.jumpMainPage()
+//        let dic = ["memberCellphone": userNameTF.content(),
+//                   "loginPwd": passwordTF.content()]
+//        RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postArticel(params: dic),
+//                                                 path: .login,
+//                                                 model: YNormalModel.self,
+//                                                 success:
+//            { [weak self] (response, json) in
+//            LoginManager.share.currentUser = userModel.deserialize(from: response.data)
+//            self?.jumpMainPage()
+//        }) { [weak self](error) in
+//            SVProgressHUD.showError(withStatus: error.message)
+//            self?.jumpMainPage()
+//        }
     }
     
     func jumpMainPage() {

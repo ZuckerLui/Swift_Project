@@ -10,6 +10,7 @@ import UIKit
 import HandyJSON
 
 class knowledgeSectionModel: HandyJSON {
+    
     var sectionTitle: String!
     var subModules: Array<KnowledgeModel>?
     required init() {}

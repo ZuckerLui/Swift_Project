@@ -7,8 +7,8 @@
                 "controller": "Swift_Project.ClosuresViewController"
             },
             {
-                "moduleName":"module2",
-                "controller": "Swift_Project.ClosuresViewController"
+                "moduleName":"链表",
+                "controller": "Swift_Project.DataStructViewController"
             },
             {
                 "moduleName":"moduleName3",

@@ -24,6 +24,10 @@
 		95494B22243F1D41007B7DEE /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B1C243F1D41007B7DEE /* SVIndefiniteAnimatedView.m */; };
 		95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95494B1D243F1D41007B7DEE /* SVProgressHUD.bundle */; };
 		95494B26243F2810007B7DEE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95494B25243F2810007B7DEE /* RequestManager.swift */; };
+		95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D231952517916E00A9FF80 /* BinaryTree.swift */; };
+		95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2F7672514B37D00AF29D4 /* LinearList.swift */; };
+		95D2F7712514B43D00AF29D4 /* DataStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */; };
+		95D2F7722514B43D00AF29D4 /* DataStructViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */; };
 		95F8ABFC243C65430046400E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8ABFB243C65430046400E /* AppDelegate.swift */; };
 		95F8AC03243C65430046400E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F8AC01243C65430046400E /* Main.storyboard */; };
 		95F8AC05243C65440046400E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F8AC04243C65440046400E /* Assets.xcassets */; };
@@ -100,6 +104,10 @@
 		95494B1D243F1D41007B7DEE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		95494B1E243F1D41007B7DEE /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		95494B25243F2810007B7DEE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		95D231952517916E00A9FF80 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
+		95D2F7672514B37D00AF29D4 /* LinearList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearList.swift; sourceTree = "<group>"; };
+		95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructViewController.swift; sourceTree = "<group>"; };
+		95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataStructViewController.xib; sourceTree = "<group>"; };
 		95F8ABF8243C65430046400E /* Swift_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F8ABFB243C65430046400E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F8AC02243C65430046400E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -219,6 +227,17 @@
 				95FC0B072441C25B005DBD7B /* YSendArticelAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		95D2F751251491E900AF29D4 /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				95D2F7672514B37D00AF29D4 /* LinearList.swift */,
+				95D231952517916E00A9FF80 /* BinaryTree.swift */,
+				95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */,
+				95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */,
+			);
+			path = DataStruct;
 			sourceTree = "<group>";
 		};
 		95F8ABEF243C65430046400E = {
@@ -350,6 +369,7 @@
 		95FBDEF82488FF9B005019BA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				95D2F751251491E900AF29D4 /* DataStruct */,
 				95FBDEF92488FFE4005019BA /* KnowledgeModelViewController.swift */,
 				95FBDEFB2489021D005019BA /* KnowledgeModelCell.swift */,
 				95FF0B622500C083009012A2 /* KnowledgeModelCollectionHeaderView.swift */,
@@ -531,6 +551,7 @@
 				95F8AC05243C65440046400E /* Assets.xcassets in Resources */,
 				95F8AC03243C65430046400E /* Main.storyboard in Resources */,
 				95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */,
+				95D2F7722514B43D00AF29D4 /* DataStructViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,8 +683,10 @@
 			files = (
 				95FB5524245169C300261F1E /* RealmViewController.swift in Sources */,
 				95F9402C244313B70001E506 /* MeViewController.swift in Sources */,
+				95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */,
 				95FEA9902504D1B0007EEF79 /* ClosuresViewController.swift in Sources */,
 				95FB552824517AE900261F1E /* CustomerModel.swift in Sources */,
+				95D2F7712514B43D00AF29D4 /* DataStructViewController.swift in Sources */,
 				95F94025244311A80001E506 /* CTabBarViewController.swift in Sources */,
 				95FF0B632500C083009012A2 /* KnowledgeModelCollectionHeaderView.swift in Sources */,
 				95FF0B652500D610009012A2 /* KnowledgeModel.swift in Sources */,
@@ -690,6 +713,7 @@
 				9503405824596F8A000F7FF7 /* PageView.swift in Sources */,
 				95401CC024592207003496D6 /* TitleView.swift in Sources */,
 				95FBDEFC2489021D005019BA /* KnowledgeModelCell.swift in Sources */,
+				95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */,
 				95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */,
 				95494B22243F1D41007B7DEE /* SVIndefiniteAnimatedView.m in Sources */,
 				95494B21243F1D41007B7DEE /* SVProgressHUD.m in Sources */,
@@ -871,9 +895,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swift_Project/SXMapsEducation.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 56P78W32BT;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X6CJC6T9CP;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Swift_Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -882,9 +906,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sxmaps.education.work;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zucker-swift";
 				PRODUCT_NAME = Swift_Project;
-				PROVISIONING_PROFILE_SPECIFIER = sxmapsEducationWorkDeve;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Swift_Project/Bridge/Project_Bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -897,9 +921,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Swift_Project/SXMapsEducation.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 56P78W32BT;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X6CJC6T9CP;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Swift_Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -908,9 +932,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sxmaps.education.work;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zucker-swift";
 				PRODUCT_NAME = Swift_Project;
-				PROVISIONING_PROFILE_SPECIFIER = sxmapsEducationWorkAPPStore;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Swift_Project/Bridge/Project_Bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

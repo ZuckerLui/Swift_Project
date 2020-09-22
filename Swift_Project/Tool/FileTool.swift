@@ -15,8 +15,9 @@ class FileTool: NSObject {
         // 带throws的方法需要抛异常
         do {
             /*
-             * try 和 try! 的区别
+             * try    try？   try!
              * try 发生异常会跳到catch代码中
+             * try? 返回一个可选类型
              * try! 发生异常程序会直接crash
              */
             let data = try Data(contentsOf: url)

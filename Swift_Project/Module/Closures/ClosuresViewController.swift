@@ -8,35 +8,23 @@
 
 import UIKit
 
-typealias textBlock = (_ agrument: String) -> String
+typealias textBlock = (_ agrument: String) -> Void
 
 class ClosuresViewController: UIViewController {
-
+    var blockArray: [textBlock] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "闭包"
         self.view.addSubview(self.sortLabel)
-        self.view.addSubview(self.escapingLabel)
-        self.view.addSubview(self.noescapingLabel)
+        self.view.addSubview(self.closuresLabel)
     }
     
-    // 非逃逸闭包label
-    lazy var noescapingLabel: UILabel = {
-        let label = UILabel.init(frame: CGRect(x: 0, y: 240, width: 300, height: 40))
-        label.backgroundColor = .yellow
-        label.text = "noescaping label"
-        let tap = UITapGestureRecognizer.init(target: self, action: #selector(noescaptingAction(tap:)))
-        label.addGestureRecognizer(tap)
-        label.isUserInteractionEnabled = true
-        return label
-    }()
-    
-    // 逃逸闭包label
-    lazy var escapingLabel: UILabel = {
+    lazy var closuresLabel: UILabel = {
         let label = UILabel.init(frame: CGRect(x: 0, y: 170, width: 300, height: 40))
         label.backgroundColor = .orange
         label.text = "escaping label"
-        let tap = UITapGestureRecognizer.init(target: self, action: #selector(escapingAction(tap:)))
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(closuresAction(tap:)))
         label.addGestureRecognizer(tap)
         label.isUserInteractionEnabled = true
         return label
@@ -52,29 +40,37 @@ class ClosuresViewController: UIViewController {
         label.isUserInteractionEnabled = true
         return label
     }()
-}
-
-extension ClosuresViewController {
-    @objc func noescaptingAction(tap: UITapGestureRecognizer) {
-        
-    }
     
-    func noescapingFunc(_ text: String, successBlock: (_ newText: String) -> Void) {
-        
+    deinit {
+        print("closureViewController deinit")
     }
 }
 
+// 逃逸闭包和非逃逸闭包的区别
 extension ClosuresViewController {
-    @objc func escapingAction(tap: UITapGestureRecognizer) {
-        let label = tap.view as! UILabel
-        self.escapingFunc(label.text!) {[weak label] (newText) in
-            label?.text = newText
+    
+    @objc func closuresAction(tap: UITapGestureRecognizer) {
+        // @escaping 内部需要弱引用，weak 引用的对象被回收后，指针会被置nil，但是unowned不会
+        self.escapingFunc(self.closuresLabel.text!) {[weak self] (newText) in
+            // 将一个闭包标记为 @escaping 意味着你必须在闭包中显式地引用 self。
+            self?.closuresLabel.text = "block completion"
+        }
+        
+        self.noescapingFunc(self.closuresLabel.text!) {(newText) in
+            // @noescaping 可以隐士使用self
+            closuresLabel.text = "block completion"
         }
     }
     
     func escapingFunc(_ text: String, successBlock: @escaping (_ newText: String) -> Void) {
-        let newText = "completion " + text
-        successBlock(newText)
+        // 逃逸闭包被添加到一个函数外定义的数组中，并没有在函数内展开
+        blockArray.append(successBlock)
+    }
+    
+    func noescapingFunc(_ text: String, successBlock: (_ newText: String) -> Void) {
+        // 非逃逸闭包无法保存在外部，所以不能添加到外部数组中
+//        blockArray.append(successBlock)   -> X
+        successBlock(text)
     }
 }
 

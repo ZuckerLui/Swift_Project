@@ -15,10 +15,10 @@ class DataStructViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var preNode: Node?
-        var headNode: Node?
+        var preNode: LinearListNode?
+        var headNode: LinearListNode?
         for (index, value) in listData.enumerated() {
-            let node = Node(value, nil)
+            let node = LinearListNode(value, nil)
             if index == 0 {
                 headNode = node
             }

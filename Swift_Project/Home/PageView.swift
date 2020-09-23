@@ -13,7 +13,7 @@ let pageViewCellIdentifier = "pageViewCellIdentifier"
 typealias scrollBlock = (_ newY: CGFloat) -> Void
 
 class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
-    var currentTableView = UITableView()
+    var currentTableView: UITableView?
     // 子tableView能否滑动
     var subCanScroll: Bool = false
     var scrollBlock: scrollBlock?
@@ -48,6 +48,10 @@ class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
         return tableView
     }
     
+    func scrollTo(_ index: Int) {
+        self.setContentOffset(CGPoint(x: self.width * CGFloat(index), y: 0), animated: true)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -63,7 +67,7 @@ extension PageView {
         if indexPath.row == 49 {
             cell.textLabel?.text = "the last one"
         } else {
-            cell.textLabel?.text = "dsadasdas"
+            cell.textLabel?.text = "好长好长的内容"
         }
         
         return cell

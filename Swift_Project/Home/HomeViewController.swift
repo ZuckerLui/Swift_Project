@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var cyclePictureView: CyclePicturePlayView?
     var pageView: PageView?
+    var sectionHeaderView: TitleView?
     // 父 tableView 能否滑动
     var superCanScroll: Bool = true
     
@@ -71,6 +72,7 @@ extension HomeViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeTableViewCellIdentifier) as! HomeTableViewCell
         self.pageView = cell.pageView
+        self.pageView?.delegate = self
         self.pageView?.scrollBlock = { (offsetY) in
             if offsetY > 0 {
                 self.superCanScroll = false
@@ -84,7 +86,10 @@ extension HomeViewController {
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionHeaderView = TitleView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: 45), titles: titles)
+        sectionHeaderView = TitleView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: 45), titles: titles)
+        sectionHeaderView!.changeBlock = {(tag) -> Void in
+            self.pageView?.scrollTo(tag)
+        }
         return sectionHeaderView
     }
     
@@ -93,7 +98,7 @@ extension HomeViewController {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        // 第0组的最上面
+        // 第0组的最上面的y值
         let sectionTop = self.tableView.rect(forSection: 0).origin.y
         
         if scrollView.contentOffset.y >= sectionTop {
@@ -105,6 +110,17 @@ extension HomeViewController {
             if !self.superCanScroll {
                 scrollView.contentOffset = CGPoint(x: 0, y: sectionTop);
             }
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        if NSStringFromClass(type(of: scrollView)) == "Swift_Project.PageView" {
+//            let contentOffset = scrollView.contentOffset
+//        }
+        // 滑动翻页完成，滑动对应的标签
+        if self.pageView == scrollView {
+            let index = scrollView.contentOffset.x / self.pageView!.width
+            self.sectionHeaderView?.scrollLabelTo(Int(index))
         }
     }
 }

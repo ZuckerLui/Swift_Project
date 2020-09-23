@@ -56,4 +56,16 @@ extension UIView {
             frame = tempFrame
         }
     }
+    
+    var centerX: CGFloat {
+        get {
+            return self.center.x
+        }
+        set (newValue){
+            var tempFrame = frame
+            tempFrame.origin.x = newValue - self.width/2
+            frame = tempFrame
+        }
+    }
+    
 }

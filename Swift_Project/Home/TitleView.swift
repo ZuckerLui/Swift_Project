@@ -8,9 +8,15 @@
 
 import UIKit
 
+//typealias changeBlick = (_ tag: String) -> Void
+
 class TitleView: UIScrollView {
     var titles: [String] = Array()
     let line = UIView()
+    var labelArray: [UILabel] = []
+    var currentIndex = 1000
+    
+    var changeBlock: ((_ tag: Int) -> Void)?
     
     convenience init(frame: CGRect, titles: [String]) {
         self.init(frame: frame)
@@ -32,6 +38,7 @@ class TitleView: UIScrollView {
             let tap = UITapGestureRecognizer(target: self, action: #selector(gestureAction(gesture:)))
             label.addGestureRecognizer(tap)
             self.addSubview(label)
+            labelArray.append(label)
         }
         
         line.frame = CGRect(x: 30, y: 42, width: 40, height: 3)
@@ -40,7 +47,31 @@ class TitleView: UIScrollView {
     }
     
     @objc func gestureAction(gesture: UIGestureRecognizer) {
-        
+        let view = gesture.view!
+        if self.currentIndex == view.tag {
+            return
+        }
+        // 切换标签，滑动对应的页面
+        if let block = changeBlock {
+            self.currentIndex = view.tag
+            let label = labelArray[self.currentIndex - 1000]
+            UIView.animate(withDuration: 0.3) { [self] in
+                line.centerX = label.centerX
+            }
+            block(view.tag - 1000)
+        }
+    }
+    
+    // 滑动标签
+    func scrollLabelTo(_ index: Int) {
+        if index == self.currentIndex - 1000 {
+            return
+        }
+        self.currentIndex = 1000 + index
+        let label = labelArray[self.currentIndex - 1000]
+        UIView.animate(withDuration: 0.3) { [self] in
+            line.centerX = label.centerX
+        }
     }
     
     override init(frame: CGRect) {

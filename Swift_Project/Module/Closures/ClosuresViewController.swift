@@ -18,6 +18,35 @@ class ClosuresViewController: UIViewController {
         self.title = "闭包"
         self.view.addSubview(self.sortLabel)
         self.view.addSubview(self.closuresLabel)
+        
+        var msg1 = "拷贝当前变量"
+        let closure1 = { [msg1] in print("\(msg1)")}
+        msg1 = "修改不影响"
+        closure1()
+        
+        var msg2 = "引用当前变量"
+        let closure2 = {print("\(msg2)")}
+        msg2 = "修改影响引用值"
+        closure2()
+        
+        self.countUniques([3, 1, 1, 1])
+    }
+    
+    func countUniques<T: Comparable>(_ array: Array<T>) -> Int {
+        let sorted = array.sorted(by: <)
+    print("sorted = \(sorted)")
+      let initial: (T?, Int) = (.none, 0)
+      let reduced = sorted.reduce(initial) {
+        print("\($0),   \(1)")
+        return ($1, $0.0 == $1 ? $0.1 : $0.1 + 1)
+      }
+        print("reduced = \(reduced)")
+        let reduced1 = sorted.reduce(initial) { (result, item) -> (T?, Int) in
+            (item, result.0 == item ? result.1 : result.1 + 1)
+        }
+        print("reduced1 = \(reduced1)")
+
+        return reduced.1
     }
     
     lazy var closuresLabel: UILabel = {
@@ -48,7 +77,11 @@ class ClosuresViewController: UIViewController {
 
 // 逃逸闭包和非逃逸闭包的区别
 extension ClosuresViewController {
-    
+    var jssx: Int {
+        get{
+            return 4
+        }
+    }
     @objc func closuresAction(tap: UITapGestureRecognizer) {
         // @escaping 内部需要弱引用，weak 引用的对象被回收后，指针会被置nil，但是unowned不会
         self.escapingFunc(self.closuresLabel.text!) {[weak self] (newText) in

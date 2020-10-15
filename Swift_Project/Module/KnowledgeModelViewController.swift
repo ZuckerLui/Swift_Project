@@ -71,9 +71,11 @@ extension KnowledgeModelViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sectionModel: knowledgeSectionModel = self.dataSource[indexPath.section]
         let model: KnowledgeModel = (sectionModel.subModules?[indexPath.row])!
-        let vc = (NSClassFromString(model.controllerName!) as! UIViewController.Type).init()
-        vc.hidesBottomBarWhenPushed = true;
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let name = model.controllerName {
+            let vc = (NSClassFromString(name) as! UIViewController.Type).init()
+            vc.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

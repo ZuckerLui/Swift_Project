@@ -24,10 +24,17 @@
 		95494B22243F1D41007B7DEE /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B1C243F1D41007B7DEE /* SVIndefiniteAnimatedView.m */; };
 		95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 95494B1D243F1D41007B7DEE /* SVProgressHUD.bundle */; };
 		95494B26243F2810007B7DEE /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95494B25243F2810007B7DEE /* RequestManager.swift */; };
+		956AFB9C251E66FF005F78E9 /* Algorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956AFB9B251E66FF005F78E9 /* Algorithm.swift */; };
+		956EFC2125304BA80059B27F /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956EFC2025304BA80059B27F /* ProtocolViewController.swift */; };
+		956EFC29253055B90059B27F /* ProtocolObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956EFC28253055B90059B27F /* ProtocolObject.swift */; };
+		95719B5D251C71ED00548E44 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */; };
+		95B9D132253828A80023E52A /* RuntimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B9D131253828A80023E52A /* RuntimeObject.m */; };
+		95B9D13825382F5D0023E52A /* BackupRespondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B9D13725382F5D0023E52A /* BackupRespondObject.m */; };
+		95CB5077252091EA0085FAF5 /* linkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB5076252091EA0085FAF5 /* linkedListViewController.swift */; };
+		95CB507F2520924E0085FAF5 /* BinaryTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB507E2520924E0085FAF5 /* BinaryTreeViewController.swift */; };
 		95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D231952517916E00A9FF80 /* BinaryTree.swift */; };
 		95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2F7672514B37D00AF29D4 /* LinearList.swift */; };
-		95D2F7712514B43D00AF29D4 /* DataStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */; };
-		95D2F7722514B43D00AF29D4 /* DataStructViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */; };
+		95E9AD1A2528E2F100C8A99B /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E9AD192528E2F100C8A99B /* OCViewController.m */; };
 		95F8ABFC243C65430046400E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8ABFB243C65430046400E /* AppDelegate.swift */; };
 		95F8AC03243C65430046400E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F8AC01243C65430046400E /* Main.storyboard */; };
 		95F8AC05243C65440046400E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F8AC04243C65440046400E /* Assets.xcassets */; };
@@ -104,10 +111,20 @@
 		95494B1D243F1D41007B7DEE /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		95494B1E243F1D41007B7DEE /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
 		95494B25243F2810007B7DEE /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		956AFB9B251E66FF005F78E9 /* Algorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algorithm.swift; sourceTree = "<group>"; };
+		956EFC2025304BA80059B27F /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
+		956EFC28253055B90059B27F /* ProtocolObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolObject.swift; sourceTree = "<group>"; };
+		95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedList.swift; sourceTree = "<group>"; };
+		95B9D130253828A80023E52A /* RuntimeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeObject.h; sourceTree = "<group>"; };
+		95B9D131253828A80023E52A /* RuntimeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeObject.m; sourceTree = "<group>"; };
+		95B9D13625382F5D0023E52A /* BackupRespondObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupRespondObject.h; sourceTree = "<group>"; };
+		95B9D13725382F5D0023E52A /* BackupRespondObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupRespondObject.m; sourceTree = "<group>"; };
+		95CB5076252091EA0085FAF5 /* linkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkedListViewController.swift; sourceTree = "<group>"; };
+		95CB507E2520924E0085FAF5 /* BinaryTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeViewController.swift; sourceTree = "<group>"; };
 		95D231952517916E00A9FF80 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		95D2F7672514B37D00AF29D4 /* LinearList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearList.swift; sourceTree = "<group>"; };
-		95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructViewController.swift; sourceTree = "<group>"; };
-		95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataStructViewController.xib; sourceTree = "<group>"; };
+		95E9AD182528E2F100C8A99B /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		95E9AD192528E2F100C8A99B /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
 		95F8ABF8243C65430046400E /* Swift_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F8ABFB243C65430046400E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95F8AC02243C65430046400E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -229,15 +246,62 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		95D2F751251491E900AF29D4 /* DataStruct */ = {
+		956AFB9A251E66DC005F78E9 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				956AFB9B251E66FF005F78E9 /* Algorithm.swift */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		956EFC1F25304B660059B27F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				956EFC2025304BA80059B27F /* ProtocolViewController.swift */,
+				956EFC28253055B90059B27F /* ProtocolObject.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		95CB5074252091970085FAF5 /* LinkedlList */ = {
 			isa = PBXGroup;
 			children = (
 				95D2F7672514B37D00AF29D4 /* LinearList.swift */,
+				95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */,
+				95CB5076252091EA0085FAF5 /* linkedListViewController.swift */,
+			);
+			path = LinkedlList;
+			sourceTree = "<group>";
+		};
+		95CB5075252091BC0085FAF5 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
 				95D231952517916E00A9FF80 /* BinaryTree.swift */,
-				95D2F76F2514B43D00AF29D4 /* DataStructViewController.swift */,
-				95D2F7702514B43D00AF29D4 /* DataStructViewController.xib */,
+				95CB507E2520924E0085FAF5 /* BinaryTreeViewController.swift */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
+		95D2F751251491E900AF29D4 /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				95CB5075252091BC0085FAF5 /* BinaryTree */,
+				95CB5074252091970085FAF5 /* LinkedlList */,
 			);
 			path = DataStruct;
+			sourceTree = "<group>";
+		};
+		95E9AD172528E20100C8A99B /* Object-C */ = {
+			isa = PBXGroup;
+			children = (
+				95E9AD182528E2F100C8A99B /* OCViewController.h */,
+				95E9AD192528E2F100C8A99B /* OCViewController.m */,
+				95B9D130253828A80023E52A /* RuntimeObject.h */,
+				95B9D131253828A80023E52A /* RuntimeObject.m */,
+				95B9D13625382F5D0023E52A /* BackupRespondObject.h */,
+				95B9D13725382F5D0023E52A /* BackupRespondObject.m */,
+			);
+			path = "Object-C";
 			sourceTree = "<group>";
 		};
 		95F8ABEF243C65430046400E = {
@@ -265,6 +329,7 @@
 		95F8ABFA243C65430046400E /* Swift_Project */ = {
 			isa = PBXGroup;
 			children = (
+				95E9AD172528E20100C8A99B /* Object-C */,
 				9504DF512506405300C1B195 /* CustomClass */,
 				95FF0B692500DCC9009012A2 /* Tool */,
 				95FBDEF82488FF9B005019BA /* Module */,
@@ -369,6 +434,8 @@
 		95FBDEF82488FF9B005019BA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				956EFC1F25304B660059B27F /* Protocol */,
+				956AFB9A251E66DC005F78E9 /* Algorithm */,
 				95D2F751251491E900AF29D4 /* DataStruct */,
 				95FBDEF92488FFE4005019BA /* KnowledgeModelViewController.swift */,
 				95FBDEFB2489021D005019BA /* KnowledgeModelCell.swift */,
@@ -551,7 +618,6 @@
 				95F8AC05243C65440046400E /* Assets.xcassets in Resources */,
 				95F8AC03243C65430046400E /* Main.storyboard in Resources */,
 				95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */,
-				95D2F7722514B43D00AF29D4 /* DataStructViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,11 +748,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FB5524245169C300261F1E /* RealmViewController.swift in Sources */,
+				956EFC2125304BA80059B27F /* ProtocolViewController.swift in Sources */,
 				95F9402C244313B70001E506 /* MeViewController.swift in Sources */,
 				95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */,
+				956EFC29253055B90059B27F /* ProtocolObject.swift in Sources */,
 				95FEA9902504D1B0007EEF79 /* ClosuresViewController.swift in Sources */,
 				95FB552824517AE900261F1E /* CustomerModel.swift in Sources */,
-				95D2F7712514B43D00AF29D4 /* DataStructViewController.swift in Sources */,
 				95F94025244311A80001E506 /* CTabBarViewController.swift in Sources */,
 				95FF0B632500C083009012A2 /* KnowledgeModelCollectionHeaderView.swift in Sources */,
 				95FF0B652500D610009012A2 /* KnowledgeModel.swift in Sources */,
@@ -694,12 +761,17 @@
 				950A6C2A24528B4E008E5EB7 /* CustomerRealmTool.swift in Sources */,
 				95FEA98D2504C422007EEF79 /* String+Extension.swift in Sources */,
 				95F8AC2D243C78830046400E /* LoginViewController.swift in Sources */,
+				95CB507F2520924E0085FAF5 /* BinaryTreeViewController.swift in Sources */,
+				956AFB9C251E66FF005F78E9 /* Algorithm.swift in Sources */,
+				95E9AD1A2528E2F100C8A99B /* OCViewController.m in Sources */,
 				95F940292443135B0001E506 /* HomeViewController.swift in Sources */,
 				95F940202443004A0001E506 /* userModel.swift in Sources */,
+				95CB5077252091EA0085FAF5 /* linkedListViewController.swift in Sources */,
 				953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */,
 				951886D624567B870067686E /* ProtocolView.swift in Sources */,
 				95F94023244311410001E506 /* CNavigationViewController.swift in Sources */,
 				95216D482461520E0061D3DC /* HomeTableview.swift in Sources */,
+				95B9D13825382F5D0023E52A /* BackupRespondObject.m in Sources */,
 				95494B26243F2810007B7DEE /* RequestManager.swift in Sources */,
 				95FD9C3E244042F3008FA954 /* NetWorkBaseModel.swift in Sources */,
 				951594662446EE880075F3A1 /* LoginManager.swift in Sources */,
@@ -711,8 +783,10 @@
 				95FC0DBC243D9DA1002E77A3 /* SceneDelegate.swift in Sources */,
 				95FC0B082441C25B005DBD7B /* YSendArticelAPI.swift in Sources */,
 				9503405824596F8A000F7FF7 /* PageView.swift in Sources */,
+				95B9D132253828A80023E52A /* RuntimeObject.m in Sources */,
 				95401CC024592207003496D6 /* TitleView.swift in Sources */,
 				95FBDEFC2489021D005019BA /* KnowledgeModelCell.swift in Sources */,
+				95719B5D251C71ED00548E44 /* DoubleLinkedList.swift in Sources */,
 				95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */,
 				95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */,
 				95494B22243F1D41007B7DEE /* SVIndefiniteAnimatedView.m in Sources */,

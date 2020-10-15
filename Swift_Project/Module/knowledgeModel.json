@@ -7,8 +7,8 @@
                 "controller": "Swift_Project.ClosuresViewController"
             },
             {
-                "moduleName":"链表",
-                "controller": "Swift_Project.DataStructViewController"
+                "moduleName":"Protocol",
+                "controller": "Swift_Project.ProtocolViewController"
             },
             {
                 "moduleName":"moduleName3",
@@ -23,15 +23,40 @@
                 "controller": "Swift_Project.ClosuresViewController"
             },
             {
-                "moduleName":"moduleName6",
-                "controller": "Swift_Project.ClosuresViewController"
+                "moduleName":"Object-C",
+                "controller": "OCViewController"
             }
         ]
     },
     {
-        "sectionTitle": "基础语法",
-        "subModules": []
+        "sectionTitle": "数据结构",
+        "subModules": [
+            {
+                "moduleName":"线性表",
+                "controller": "Swift_Project.LinkedListViewController"
+            },
+            {
+                "moduleName":"二叉树",
+                "controller": "Swift_Project.BinaryTreeViewController"
+            },
+            {
+                "moduleName":"moduleName3",
+                "controller": "Swift_Project.BinaryTreeViewController"
+            },
+            {
+                "moduleName":"moduleName4",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName5",
+                "controller": "Swift_Project.ClosuresViewController"
+            },
+            {
+                "moduleName":"moduleName6",
+                "controller": "Swift_Project.ClosuresViewController"
+            }
+        ]
     }
     
 ]
-
+ 

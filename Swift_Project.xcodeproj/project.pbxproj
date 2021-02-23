@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		95216D482461520E0061D3DC /* HomeTableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95216D472461520E0061D3DC /* HomeTableview.swift */; };
 		95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95393B1D24597A6F00AD6B43 /* UIView+Extension.swift */; };
 		953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BF0FE2445C1DF0082D838 /* CyclePicturePlayView.swift */; };
+		953CB86A25495D9600B09FAC /* UIControl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 953CB86925495D9600B09FAC /* UIControl+Category.m */; };
 		95401CC024592207003496D6 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95401CBF24592207003496D6 /* TitleView.swift */; };
 		95494B1F243F1D41007B7DEE /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B15243F1D41007B7DEE /* SVRadialGradientLayer.m */; };
 		95494B20243F1D41007B7DEE /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95494B18243F1D41007B7DEE /* SVProgressAnimatedView.m */; };
@@ -28,9 +29,12 @@
 		956EFC2125304BA80059B27F /* ProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956EFC2025304BA80059B27F /* ProtocolViewController.swift */; };
 		956EFC29253055B90059B27F /* ProtocolObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956EFC28253055B90059B27F /* ProtocolObject.swift */; };
 		95719B5D251C71ED00548E44 /* DoubleLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */; };
+		9571CD7A25D7D70A0099D248 /* RXBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9571CD7825D7D70A0099D248 /* RXBaseViewController.swift */; };
+		9571CD7B25D7D70A0099D248 /* RXBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9571CD7925D7D70A0099D248 /* RXBaseViewController.xib */; };
+		95816E64253EDC7700C66AF8 /* GCDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95816E63253EDC7700C66AF8 /* GCDViewController.swift */; };
 		95B9D132253828A80023E52A /* RuntimeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B9D131253828A80023E52A /* RuntimeObject.m */; };
 		95B9D13825382F5D0023E52A /* BackupRespondObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B9D13725382F5D0023E52A /* BackupRespondObject.m */; };
-		95CB5077252091EA0085FAF5 /* linkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB5076252091EA0085FAF5 /* linkedListViewController.swift */; };
+		95CB5077252091EA0085FAF5 /* LinkedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB5076252091EA0085FAF5 /* LinkedListViewController.swift */; };
 		95CB507F2520924E0085FAF5 /* BinaryTreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB507E2520924E0085FAF5 /* BinaryTreeViewController.swift */; };
 		95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D231952517916E00A9FF80 /* BinaryTree.swift */; };
 		95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2F7672514B37D00AF29D4 /* LinearList.swift */; };
@@ -98,6 +102,8 @@
 		95216D472461520E0061D3DC /* HomeTableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableview.swift; sourceTree = "<group>"; };
 		95393B1D24597A6F00AD6B43 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		953BF0FE2445C1DF0082D838 /* CyclePicturePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclePicturePlayView.swift; sourceTree = "<group>"; };
+		953CB86825495D9600B09FAC /* UIControl+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Category.h"; sourceTree = "<group>"; };
+		953CB86925495D9600B09FAC /* UIControl+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Category.m"; sourceTree = "<group>"; };
 		95401CBF24592207003496D6 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		95494B12243F1614007B7DEE /* Project_Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Project_Bridge.h; sourceTree = "<group>"; };
 		95494B15243F1D41007B7DEE /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
@@ -115,11 +121,14 @@
 		956EFC2025304BA80059B27F /* ProtocolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolViewController.swift; sourceTree = "<group>"; };
 		956EFC28253055B90059B27F /* ProtocolObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolObject.swift; sourceTree = "<group>"; };
 		95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLinkedList.swift; sourceTree = "<group>"; };
+		9571CD7825D7D70A0099D248 /* RXBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXBaseViewController.swift; sourceTree = "<group>"; };
+		9571CD7925D7D70A0099D248 /* RXBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXBaseViewController.xib; sourceTree = "<group>"; };
+		95816E63253EDC7700C66AF8 /* GCDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDViewController.swift; sourceTree = "<group>"; };
 		95B9D130253828A80023E52A /* RuntimeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeObject.h; sourceTree = "<group>"; };
 		95B9D131253828A80023E52A /* RuntimeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeObject.m; sourceTree = "<group>"; };
 		95B9D13625382F5D0023E52A /* BackupRespondObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackupRespondObject.h; sourceTree = "<group>"; };
 		95B9D13725382F5D0023E52A /* BackupRespondObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackupRespondObject.m; sourceTree = "<group>"; };
-		95CB5076252091EA0085FAF5 /* linkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkedListViewController.swift; sourceTree = "<group>"; };
+		95CB5076252091EA0085FAF5 /* LinkedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListViewController.swift; sourceTree = "<group>"; };
 		95CB507E2520924E0085FAF5 /* BinaryTreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTreeViewController.swift; sourceTree = "<group>"; };
 		95D231952517916E00A9FF80 /* BinaryTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryTree.swift; sourceTree = "<group>"; };
 		95D2F7672514B37D00AF29D4 /* LinearList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearList.swift; sourceTree = "<group>"; };
@@ -203,6 +212,15 @@
 			path = CustomClass;
 			sourceTree = "<group>";
 		};
+		953CB85B254958F300B09FAC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				953CB86825495D9600B09FAC /* UIControl+Category.h */,
+				953CB86925495D9600B09FAC /* UIControl+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		95494B11243F15C0007B7DEE /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,12 +281,37 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		9571CD7625D7C3A10099D248 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9571CD7725D7D6EE0099D248 /* Base */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		9571CD7725D7D6EE0099D248 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9571CD7825D7D70A0099D248 /* RXBaseViewController.swift */,
+				9571CD7925D7D70A0099D248 /* RXBaseViewController.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		95816E59253EDC1B00C66AF8 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				95816E63253EDC7700C66AF8 /* GCDViewController.swift */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
 		95CB5074252091970085FAF5 /* LinkedlList */ = {
 			isa = PBXGroup;
 			children = (
 				95D2F7672514B37D00AF29D4 /* LinearList.swift */,
 				95719B5C251C71ED00548E44 /* DoubleLinkedList.swift */,
-				95CB5076252091EA0085FAF5 /* linkedListViewController.swift */,
+				95CB5076252091EA0085FAF5 /* LinkedListViewController.swift */,
 			);
 			path = LinkedlList;
 			sourceTree = "<group>";
@@ -294,6 +337,7 @@
 		95E9AD172528E20100C8A99B /* Object-C */ = {
 			isa = PBXGroup;
 			children = (
+				953CB85B254958F300B09FAC /* Category */,
 				95E9AD182528E2F100C8A99B /* OCViewController.h */,
 				95E9AD192528E2F100C8A99B /* OCViewController.m */,
 				95B9D130253828A80023E52A /* RuntimeObject.h */,
@@ -329,6 +373,7 @@
 		95F8ABFA243C65430046400E /* Swift_Project */ = {
 			isa = PBXGroup;
 			children = (
+				9571CD7625D7C3A10099D248 /* RxSwift */,
 				95E9AD172528E20100C8A99B /* Object-C */,
 				9504DF512506405300C1B195 /* CustomClass */,
 				95FF0B692500DCC9009012A2 /* Tool */,
@@ -434,6 +479,7 @@
 		95FBDEF82488FF9B005019BA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				95816E59253EDC1B00C66AF8 /* GCD */,
 				956EFC1F25304B660059B27F /* Protocol */,
 				956AFB9A251E66DC005F78E9 /* Algorithm */,
 				95D2F751251491E900AF29D4 /* DataStruct */,
@@ -618,6 +664,7 @@
 				95F8AC05243C65440046400E /* Assets.xcassets in Resources */,
 				95F8AC03243C65430046400E /* Main.storyboard in Resources */,
 				95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */,
+				9571CD7B25D7D70A0099D248 /* RXBaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,34 +735,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Project/Pods-Swift_Project-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Project/Pods-Swift_Project-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Project/Pods-Swift_Project-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Project/Pods-Swift_Project-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_Project/Pods-Swift_Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F038A925DFA7594259316652 /* [CP] Check Pods Manifest.lock */ = {
@@ -748,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95FB5524245169C300261F1E /* RealmViewController.swift in Sources */,
+				9571CD7A25D7D70A0099D248 /* RXBaseViewController.swift in Sources */,
 				956EFC2125304BA80059B27F /* ProtocolViewController.swift in Sources */,
 				95F9402C244313B70001E506 /* MeViewController.swift in Sources */,
 				95D2F7682514B37D00AF29D4 /* LinearList.swift in Sources */,
@@ -756,6 +785,7 @@
 				95FB552824517AE900261F1E /* CustomerModel.swift in Sources */,
 				95F94025244311A80001E506 /* CTabBarViewController.swift in Sources */,
 				95FF0B632500C083009012A2 /* KnowledgeModelCollectionHeaderView.swift in Sources */,
+				953CB86A25495D9600B09FAC /* UIControl+Category.m in Sources */,
 				95FF0B652500D610009012A2 /* KnowledgeModel.swift in Sources */,
 				95494B1F243F1D41007B7DEE /* SVRadialGradientLayer.m in Sources */,
 				950A6C2A24528B4E008E5EB7 /* CustomerRealmTool.swift in Sources */,
@@ -766,7 +796,7 @@
 				95E9AD1A2528E2F100C8A99B /* OCViewController.m in Sources */,
 				95F940292443135B0001E506 /* HomeViewController.swift in Sources */,
 				95F940202443004A0001E506 /* userModel.swift in Sources */,
-				95CB5077252091EA0085FAF5 /* linkedListViewController.swift in Sources */,
+				95CB5077252091EA0085FAF5 /* LinkedListViewController.swift in Sources */,
 				953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */,
 				951886D624567B870067686E /* ProtocolView.swift in Sources */,
 				95F94023244311410001E506 /* CNavigationViewController.swift in Sources */,
@@ -786,6 +816,7 @@
 				95B9D132253828A80023E52A /* RuntimeObject.m in Sources */,
 				95401CC024592207003496D6 /* TitleView.swift in Sources */,
 				95FBDEFC2489021D005019BA /* KnowledgeModelCell.swift in Sources */,
+				95816E64253EDC7700C66AF8 /* GCDViewController.swift in Sources */,
 				95719B5D251C71ED00548E44 /* DoubleLinkedList.swift in Sources */,
 				95D231962517916E00A9FF80 /* BinaryTree.swift in Sources */,
 				95393B1E24597A6F00AD6B43 /* UIView+Extension.swift in Sources */,

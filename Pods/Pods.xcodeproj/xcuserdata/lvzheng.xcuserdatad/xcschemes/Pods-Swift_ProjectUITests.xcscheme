@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C31B206DB8DAE87FBC5206988454846"
+               BlueprintIdentifier = "1A2D7B07464EBD8E5EA2641D60C338A0"
                BuildableName = "Pods_Swift_ProjectUITests.framework"
                BlueprintName = "Pods-Swift_ProjectUITests"
                ReferencedContainer = "container:Pods.xcodeproj">

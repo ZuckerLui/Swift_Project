@@ -9,6 +9,12 @@ PODS:
   - Realm/Headers (4.1.0)
   - RealmSwift (4.1.0):
     - Realm (= 4.1.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
   - SnapKit (5.0.0)
   - SwiftyJSON (5.0.0)
 
@@ -18,17 +24,22 @@ DEPENDENCIES:
   - HandyJSON (= 5.0.0)
   - ObjectMapper (~> 3.5.1)
   - RealmSwift (= 4.1.0)
+  - RxCocoa (= 6.1.0)
+  - RxSwift (= 6.1.0)
   - SnapKit (= 5.0.0)
   - SwiftyJSON (= 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - AlamofireImage
     - HandyJSON
     - ObjectMapper
     - Realm
     - RealmSwift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
     - SwiftyJSON
 
@@ -39,9 +50,12 @@ SPEC CHECKSUMS:
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Realm: 5d1453468eca02c901c50b8a356f4a98a15b57aa
   RealmSwift: 1d238caa5c64a590c669beef1a7e858a6cf55a1c
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 7b62eae358f02c1c87553bd7e81300282ddfdab8
+PODFILE CHECKSUM: 450aa5bc8eff575e00d32f6bbcee257639f2528b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.0

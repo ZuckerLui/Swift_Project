@@ -11,9 +11,13 @@ import UIKit
 class LoginTextFieldView: UIView , UITextFieldDelegate{
     var textField = UITextField()
     let lineView = UIView()
+    private (set) var name:Int = 0 // 对外只读，对内可读写属性，set表示只有setter方法是私有的，getter不是
+    private var age:Int = 1
+    fileprivate var address:String = "address"
     
-    convenience init(frame: CGRect, placeholder: String, isSecureTextEntry: Bool, keyboardType: UIKeyboardType) {
-        self.init(frame: frame)
+    init(frame: CGRect, placeholder: String, isSecureTextEntry: Bool, keyboardType: UIKeyboardType) {
+        super.init(frame: frame)
+        name = 7
         textField.placeholder = placeholder
         textField.keyboardType = keyboardType
         textField.isSecureTextEntry = isSecureTextEntry
@@ -32,10 +36,6 @@ class LoginTextFieldView: UIView , UITextFieldDelegate{
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
     func content() -> String {
         return textField.text ?? ""
     }
@@ -50,11 +50,23 @@ class LoginTextFieldView: UIView , UITextFieldDelegate{
         return true
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func cancelResponder() {
         textField.resignFirstResponder()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class subTf: LoginTextFieldView {
+    func test() {
+        print("\(address)") // fileprivate只要在一个文件下，都可以访问
+//        self.age   即使是继承，private属性也不能访问
+    }
+}
+
+
+extension LoginTextFieldView {
+	
 }

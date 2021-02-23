@@ -32,5 +32,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1238F8D-1F99-4E3E-9247-BCA3987CFA9C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift_Project/RxSwift/Base/RXBaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "F1238F8D-1F99-4E3E-9247-BCA3987CFA9C - 30cfe6e27eb0b2c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift_Project.RXBaseViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Swift_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvzheng/Desktop/Swift_Project/Swift_Project/RxSwift/Base/RXBaseViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "1646">
+               </Location>
+               <Location
+                  uuid = "F1238F8D-1F99-4E3E-9247-BCA3987CFA9C - 3ba32d42e9cb125d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in Swift_Project.RXBaseViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Swift_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lvzheng/Desktop/Swift_Project/Swift_Project/RxSwift/Base/RXBaseViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

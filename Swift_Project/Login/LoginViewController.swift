@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         self.view.addSubview(titleLabel)
         
         userNameTF = LoginTextFieldView(frame: .zero, placeholder: "请输入用户名", isSecureTextEntry: false, keyboardType: .namePhonePad)
+        let value = userNameTF.name
+        
         userNameTF.textField.text = "15800000003"
         self.view.addSubview(userNameTF!)
         
@@ -37,6 +39,7 @@ class LoginViewController: UIViewController {
         self.view.addSubview(passwordTF!)
         
         loginBtn.setTitle("登录", for: UIControl.State.normal)
+        loginBtn.acceptEventInterval = 2
         loginBtn.backgroundColor = UIColor.orange;
         loginBtn.setTitleColor(UIColor.white, for: .normal)
         loginBtn.layer.cornerRadius = 20
@@ -45,7 +48,12 @@ class LoginViewController: UIViewController {
         self.view.addSubview(loginBtn)
         
         titleLabel.snp.makeConstraints { (make) in
-            make.top.left.equalToSuperview().offset(120)
+            if #available(iOS 11.0, *) {
+                make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(120)
+            } else {
+                make.top.equalToSuperview().offset(120)
+            }
+            make.left.equalToSuperview().offset(100)
             make.right.equalToSuperview().offset(-100)
             make.height.equalTo(50)
         }

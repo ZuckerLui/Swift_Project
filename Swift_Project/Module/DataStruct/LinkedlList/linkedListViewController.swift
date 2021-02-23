@@ -8,7 +8,7 @@
 
 import UIKit
 
-class linkedListViewController: UIViewController {
+class LinkedListViewController: UIViewController {
     var linearList: LinearList?
 
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class linkedListViewController: UIViewController {
     }
 }
 
-extension linkedListViewController {
+extension LinkedListViewController {
     func setupUI() {
         self.view.backgroundColor = .white
         self.view.addSubview(self.creatbtn(CGRect(x: 50, y: 100, width: 100, height: 40), "链表", #selector(linearListReverseAction(_:))))

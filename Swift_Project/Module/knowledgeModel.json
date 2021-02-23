@@ -11,8 +11,8 @@
                 "controller": "Swift_Project.ProtocolViewController"
             },
             {
-                "moduleName":"moduleName3",
-                "controller": "Swift_Project.ClosuresViewController"
+                "moduleName":"GCD",
+                "controller": "Swift_Project.GCDViewController"
             },
             {
                 "moduleName":"moduleName4",
@@ -42,18 +42,22 @@
             {
                 "moduleName":"moduleName3",
                 "controller": "Swift_Project.BinaryTreeViewController"
+            }
+        ]
+    },{
+        "sectionTitle": "RxSwift",
+        "subModules": [
+            {
+                "moduleName":"基本用法",
+                "controller": "Swift_Project.RXBaseViewController"
             },
             {
-                "moduleName":"moduleName4",
-                "controller": "Swift_Project.ClosuresViewController"
+                "moduleName":"二叉树",
+                "controller": "Swift_Project.BinaryTreeViewController"
             },
             {
-                "moduleName":"moduleName5",
-                "controller": "Swift_Project.ClosuresViewController"
-            },
-            {
-                "moduleName":"moduleName6",
-                "controller": "Swift_Project.ClosuresViewController"
+                "moduleName":"moduleName3",
+                "controller": "Swift_Project.BinaryTreeViewController"
             }
         ]
     }

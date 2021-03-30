@@ -28,16 +28,18 @@ class LoginViewController: UIViewController {
         titleLabel.text = "密码登录"
         self.view.addSubview(titleLabel)
         
+        // 用户名
         userNameTF = LoginTextFieldView(frame: .zero, placeholder: "请输入用户名", isSecureTextEntry: false, keyboardType: .namePhonePad)
         let value = userNameTF.name
-        
         userNameTF.textField.text = "15800000003"
         self.view.addSubview(userNameTF!)
         
+        // 密码
         passwordTF = LoginTextFieldView(frame: .zero, placeholder: "请输入密码", isSecureTextEntry: true, keyboardType: .default)
         passwordTF.textField.text = "000003"
         self.view.addSubview(passwordTF!)
         
+        // 登录按钮
         loginBtn.setTitle("登录", for: UIControl.State.normal)
         loginBtn.acceptEventInterval = 2
         loginBtn.backgroundColor = UIColor.orange;

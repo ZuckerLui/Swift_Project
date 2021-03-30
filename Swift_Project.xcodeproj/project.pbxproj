@@ -69,6 +69,12 @@
 		95FF0B652500D610009012A2 /* KnowledgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF0B642500D610009012A2 /* KnowledgeModel.swift */; };
 		95FF0B672500DAE3009012A2 /* knowledgeModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 95FF0B662500DAE3009012A2 /* knowledgeModel.json */; };
 		95FF0B6B2500DD0D009012A2 /* FileTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF0B6A2500DD0D009012A2 /* FileTool.swift */; };
+		AB4BFF4A260C35FF004586C9 /* RXTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BFF48260C35FF004586C9 /* RXTableViewController.swift */; };
+		AB4BFF4B260C35FF004586C9 /* RXTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4BFF49260C35FF004586C9 /* RXTableViewController.xib */; };
+		AB4BFF50260C36E7004586C9 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BFF4F260C36E7004586C9 /* MusicModel.swift */; };
+		AB4BFF58260C3F87004586C9 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BFF57260C3F87004586C9 /* MusicListViewModel.swift */; };
+		AB4BFF5E260C41B3004586C9 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4BFF5C260C41B3004586C9 /* MusicTableViewCell.swift */; };
+		AB4BFF5F260C41B3004586C9 /* MusicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4BFF5D260C41B3004586C9 /* MusicTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +176,12 @@
 		95FF0B642500D610009012A2 /* KnowledgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowledgeModel.swift; sourceTree = "<group>"; };
 		95FF0B662500DAE3009012A2 /* knowledgeModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = knowledgeModel.json; sourceTree = "<group>"; };
 		95FF0B6A2500DD0D009012A2 /* FileTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTool.swift; sourceTree = "<group>"; };
+		AB4BFF48260C35FF004586C9 /* RXTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXTableViewController.swift; sourceTree = "<group>"; };
+		AB4BFF49260C35FF004586C9 /* RXTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXTableViewController.xib; sourceTree = "<group>"; };
+		AB4BFF4F260C36E7004586C9 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		AB4BFF57260C3F87004586C9 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		AB4BFF5C260C41B3004586C9 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		AB4BFF5D260C41B3004586C9 /* MusicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicTableViewCell.xib; sourceTree = "<group>"; };
 		AF11E5486597C63366B1FF0A /* Pods-Swift_ProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_ProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_ProjectTests/Pods-Swift_ProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B287F8D76F32860B74FB025A /* Pods-Swift_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Project.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Project/Pods-Swift_Project.release.xcconfig"; sourceTree = "<group>"; };
 		E50AE3C43E9993C491D0EF5A /* Pods_Swift_ProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_ProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +296,7 @@
 		9571CD7625D7C3A10099D248 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				AB4BFF47260C35A4004586C9 /* UITableView */,
 				9571CD7725D7D6EE0099D248 /* Base */,
 			);
 			path = RxSwift;
@@ -538,6 +551,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB4BFF47260C35A4004586C9 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				AB4BFF48260C35FF004586C9 /* RXTableViewController.swift */,
+				AB4BFF49260C35FF004586C9 /* RXTableViewController.xib */,
+				AB4BFF4F260C36E7004586C9 /* MusicModel.swift */,
+				AB4BFF57260C3F87004586C9 /* MusicListViewModel.swift */,
+				AB4BFF5C260C41B3004586C9 /* MusicTableViewCell.swift */,
+				AB4BFF5D260C41B3004586C9 /* MusicTableViewCell.xib */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
 		E9DFCA4A093ED8F001994A84 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,9 +688,11 @@
 				95FF0B672500DAE3009012A2 /* knowledgeModel.json in Resources */,
 				95F8AC08243C65440046400E /* LaunchScreen.storyboard in Resources */,
 				95F8AC05243C65440046400E /* Assets.xcassets in Resources */,
+				AB4BFF5F260C41B3004586C9 /* MusicTableViewCell.xib in Resources */,
 				95F8AC03243C65430046400E /* Main.storyboard in Resources */,
 				95494B23243F1D41007B7DEE /* SVProgressHUD.bundle in Resources */,
 				9571CD7B25D7D70A0099D248 /* RXBaseViewController.xib in Resources */,
+				AB4BFF4B260C35FF004586C9 /* RXTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +823,7 @@
 				956AFB9C251E66FF005F78E9 /* Algorithm.swift in Sources */,
 				95E9AD1A2528E2F100C8A99B /* OCViewController.m in Sources */,
 				95F940292443135B0001E506 /* HomeViewController.swift in Sources */,
+				AB4BFF5E260C41B3004586C9 /* MusicTableViewCell.swift in Sources */,
 				95F940202443004A0001E506 /* userModel.swift in Sources */,
 				95CB5077252091EA0085FAF5 /* LinkedListViewController.swift in Sources */,
 				953BF0FF2445C1DF0082D838 /* CyclePicturePlayView.swift in Sources */,
@@ -802,9 +831,12 @@
 				95F94023244311410001E506 /* CNavigationViewController.swift in Sources */,
 				95216D482461520E0061D3DC /* HomeTableview.swift in Sources */,
 				95B9D13825382F5D0023E52A /* BackupRespondObject.m in Sources */,
+				AB4BFF4A260C35FF004586C9 /* RXTableViewController.swift in Sources */,
+				AB4BFF50260C36E7004586C9 /* MusicModel.swift in Sources */,
 				95494B26243F2810007B7DEE /* RequestManager.swift in Sources */,
 				95FD9C3E244042F3008FA954 /* NetWorkBaseModel.swift in Sources */,
 				951594662446EE880075F3A1 /* LoginManager.swift in Sources */,
+				AB4BFF58260C3F87004586C9 /* MusicListViewModel.swift in Sources */,
 				95F8AC2F243C8B620046400E /* GlobalMacro.swift in Sources */,
 				95F8ABFC243C65430046400E /* AppDelegate.swift in Sources */,
 				9504DF532506408E00C1B195 /* CustomCollectionViewFlowLayout.swift in Sources */,
@@ -1002,7 +1034,7 @@
 				CODE_SIGN_ENTITLEMENTS = Swift_Project/SXMapsEducation.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X6CJC6T9CP;
+				DEVELOPMENT_TEAM = N79NWV53J9;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Swift_Project/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1011,7 +1043,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zucker-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.newttl.like.ecar;
 				PRODUCT_NAME = Swift_Project;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Swift_Project/Bridge/Project_Bridge.h;
@@ -1037,7 +1069,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zucker-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = com.newttl.like.ecar;
 				PRODUCT_NAME = Swift_Project;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Swift_Project/Bridge/Project_Bridge.h;

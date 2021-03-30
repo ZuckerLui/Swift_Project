@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.requestData()
+//        self.requestData()
         
         self.navigationItem.title = "首页"
         self.view.addSubview(self.tableView)
@@ -34,14 +34,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.superCanScroll = true
     }
     
-    func requestData() {
-        RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postNoHud(params: [:]),
-                                                 path: .home_banner,
-                                                 model: YNormalModel.self,
-                                                 success: { (response, json) in
-             debugPrint(json)
-        }) { _ in ()}
-    }
+//    func requestData() {
+//        RequestManager.share.requestByTargetType(targetType: YSendArticelAPI.postNoHud(params: [:]),
+//                                                 path: .home_banner,
+//                                                 model: YNormalModel.self,
+//                                                 success: { (response, json) in
+//             debugPrint(json)
+//        }) { _ in ()}
+//    }
     
     lazy var tableView: UITableView = {
         let tableView = HomeTableview(frame: CGRect(x: 0, y: ScreenSize.topAreaHeight, width: ScreenSize.width, height: ScreenSize.haveBottomHeight), style: .plain)

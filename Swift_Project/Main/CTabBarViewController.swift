@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import URLNavigator
 
 class CTabBarViewController: UITabBarController {
 
         let imageArray = ["icon_tabbar_home_nor", "icon_tabbar_me_nor", "icon_tabbar_study_nor", ""];
         let selectImageArray = ["icon_tabbar_home_sel", "icon_tabbar_me_sel", "icon_tabbar_study_sel", ""];
-        
+        private let navigator: NavigatorType
+    
+    
+        init(navigator: NavigatorType) {
+            self.navigator = navigator
+            super.init(nibName: nil, bundle: nil)
+        }
+    
+        required init?(coder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             // 修改标签栏选中时文字颜色、字体
@@ -25,7 +37,7 @@ class CTabBarViewController: UITabBarController {
         func setup() {
             self.tabBar.tintColor = UIColor.red
             
-            self.addViewController(childViewController: HomeViewController(), title: "首页", image: UIImage(named: imageArray[0])!, selectImage: UIImage(named: selectImageArray[0])!, index: 0)
+            self.addViewController(childViewController: HomeViewController(navigator: navigator), title: "首页", image: UIImage(named: imageArray[0])!, selectImage: UIImage(named: selectImageArray[0])!, index: 0)
             self.addViewController(childViewController: MeViewController(), title: "我的", image: UIImage(named: imageArray[1])!, selectImage: UIImage(named: selectImageArray[1])!, index: 1)
             self.addViewController(childViewController: KnowledgeModelViewController(), title: "Module", image: UIImage(named: imageArray[2])!, selectImage: UIImage(named: selectImageArray[2])!, index: 2)
         }

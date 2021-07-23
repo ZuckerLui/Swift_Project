@@ -18,11 +18,17 @@ class HomeTableview: UITableView, UIGestureRecognizerDelegate {
 
 class HomeTableViewCell: UITableViewCell {
     var pageView: PageView?
-    
+    var openDetailVc: (() -> Void)?
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         pageView = PageView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: ScreenSize.height + 1000), count: 5)
         self.contentView.addSubview(pageView!)
+        pageView?.clickCellBlock = {[weak self] (indexPath) in
+            if let block = self?.openDetailVc {
+                block()
+            }
+        }
     }
     
     required init?(coder: NSCoder) {

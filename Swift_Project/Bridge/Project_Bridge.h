@@ -9,7 +9,10 @@
 #ifndef Project_Bridge_h
 #define Project_Bridge_h
 
-#endif /* Project_Bridge_h */
 #import "SVProgressHUD.h"
 #import "OCViewController.h"
 #import "UIControl+Category.h"
+#import "MJRefresh/MJRefresh.h"
+#import "ParamsEncryption.h"
+
+#endif /* Project_Bridge_h */

@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginManager: NSObject {
-    var currentUser: userModel?
+    var currentUser: UserModel?
     static let share = LoginManager()
     override init() {
         super.init()

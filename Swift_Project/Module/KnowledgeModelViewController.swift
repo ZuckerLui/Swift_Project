@@ -73,7 +73,7 @@ extension KnowledgeModelViewController {
         let model: KnowledgeModel = (sectionModel.subModules?[indexPath.row])!
         if let name = model.controllerName {
             let vc = (NSClassFromString(name) as! UIViewController.Type).init()
-            vc.hidesBottomBarWhenPushed = true;
+//            vc.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

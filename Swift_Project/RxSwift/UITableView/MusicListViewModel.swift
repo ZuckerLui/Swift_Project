@@ -8,21 +8,46 @@
 
 import UIKit
 import RxSwift
+import RxDataSources
 
-class MusicListViewModel: NSObject {
-    var dataSource = Observable.just([
-        MusicModel(name: "富士山下", singer: "陈奕迅"),
-        MusicModel(name: "白玫瑰", singer: "陈奕迅"),
-        MusicModel(name: "灰色轨迹", singer: "Beyond"),
-        MusicModel(name: "光辉岁月", singer: "Beyond")
-    ])
+struct MusicListViewModel {
+    var dataArray = Array<SectionModel<MusicSectionModel, MusicModel>>()
     
-    func updateViewModel() {
-        dataSource = Observable.just([
-        MusicModel(name: "白玫瑰", singer: "陈奕迅"),
-        MusicModel(name: "灰色轨迹", singer: "Beyond"),
-        MusicModel(name: "光辉岁月", singer: "Beyond"),
-        MusicModel(name: "富士山下", singer: "陈奕迅")
-    ])
+    mutating func initDataArray() -> Observable<[SectionModel<MusicSectionModel, MusicModel>]> {
+        dataArray = [
+            SectionModel(model: MusicSectionModel(area: "港台", bgColor: .orange), items: [
+                MusicModel(name: "富士山下", singer: "陈奕迅"),
+                MusicModel(name: "十一月的肖邦", singer: "周杰伦"),
+                MusicModel(name: "灰色轨迹", singer: "Beyond")
+            ]),
+            SectionModel(model: MusicSectionModel(area: "大陆", bgColor: .blue), items: [
+                MusicModel(name: "一无所有", singer: "催健"),
+                MusicModel(name: "曾经的你", singer: "许巍"),
+                MusicModel(name: "成都", singer: "赵雷")
+            ])
+        ]
+        let  result = Observable.just(dataArray)
+        return result
+    }
+    
+    mutating func updateDataArray () -> Observable<[SectionModel<MusicSectionModel, MusicModel>]>{
+        dataArray = [
+            SectionModel(model: MusicSectionModel(area: "港台", bgColor: .orange), items: [
+                MusicModel(name: "富士山下", singer: "陈奕迅"),
+                MusicModel(name: "十一月的肖邦", singer: "周杰伦"),
+                MusicModel(name: "灰色轨迹", singer: "Beyond")
+            ]),
+            SectionModel(model: MusicSectionModel(area: "大陆", bgColor: .blue), items: [
+                MusicModel(name: "一无所有", singer: "催健"),
+                MusicModel(name: "曾经的你", singer: "许巍"),
+                MusicModel(name: "成都", singer: "赵雷")
+            ]),
+            SectionModel(model: MusicSectionModel(area: "日韩", bgColor: .blue), items: [
+                MusicModel(name: "世界的尽头", singer: "???"),
+                MusicModel(name: "If You", singer: "???")
+            ])
+        ]
+        let  result = Observable.just(dataArray)
+        return result
     }
 }

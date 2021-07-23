@@ -9,7 +9,7 @@
 import UIKit
 import HandyJSON
 
-class userModel: HandyJSON {
+class UserModel: HandyJSON {
     var provinceName: String?
     var uid: String?
     var signature: String?

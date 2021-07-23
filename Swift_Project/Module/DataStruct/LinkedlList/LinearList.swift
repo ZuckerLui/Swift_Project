@@ -84,7 +84,7 @@ class LinearList {
             if node.data == value {
                 result.append(node)
             }
-            tempNode = tempNode._rlmInferWrappedType()
+//            tempNode = tempNode._rlmInferWrappedType()
         }
         return result
     }

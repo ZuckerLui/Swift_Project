@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import URLNavigator
 
 let homeTableViewCellIdentifier = "homeTableViewCellIdentifier"
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    private let navigator: NavigatorType
     
     var cyclePictureView: CyclePicturePlayView?
     var pageView: PageView?
@@ -20,6 +23,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let pictures: [String] = ["https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587550108944&di=cbec18ad90ced2d291b1c756888ca119&imgtype=0&src=http%3A%2F%2Fimg1.gtimg.com%2Frushidao%2Fpics%2Fhv1%2F20%2F108%2F1744%2F113431160.jpg"]
     let titles: [String] = ["精选", "热点", "同城", "哈哈", "通知"]
+    
+    init(navigator: NavigatorType) {
+      self.navigator = navigator
+      super.init(nibName: nil, bundle: nil)
+      self.title = "GitHub Users"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +67,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         pageView?.scrollBlock = {[weak self] (newY) in
            
         }
+
         tableView.delegate = self
         tableView.dataSource = self
         return tableView
@@ -71,6 +85,17 @@ extension HomeViewController {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: homeTableViewCellIdentifier) as! HomeTableViewCell
+        cell.openDetailVc = { [weak self] in
+            let userInfo = UserManager.shared.userInfo
+            self?.navigator.push("navigator://userInfo/userInfo", context: userInfo)
+            // 以路由的方式push UserInfo页面
+//            let isPushed = self?.navigator.push("navigator://userInfo/titleName") != nil
+//            if isPushed {
+//              print("[Navigator] push: ")
+//            } else {
+//              print("[Navigator] open: ")
+//            }
+        }
         self.pageView = cell.pageView
         self.pageView?.delegate = self
         self.pageView?.scrollBlock = { (offsetY) in
@@ -82,8 +107,6 @@ extension HomeViewController {
         }
         return cell
     }
-    
-    
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         sectionHeaderView = TitleView(frame: CGRect(x: 0, y: 0, width: ScreenSize.width, height: 45), titles: titles)

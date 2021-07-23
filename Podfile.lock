@@ -1,61 +1,92 @@
 PODS:
-  - Alamofire (4.9.0)
-  - AlamofireImage (3.6.0):
-    - Alamofire (~> 4.9)
-  - HandyJSON (5.0.0)
-  - ObjectMapper (3.5.1)
-  - Realm (4.1.0):
-    - Realm/Headers (= 4.1.0)
-  - Realm/Headers (4.1.0)
-  - RealmSwift (4.1.0):
-    - Realm (= 4.1.0)
-  - RxCocoa (6.1.0):
-    - RxRelay (= 6.1.0)
-    - RxSwift (= 6.1.0)
-  - RxRelay (6.1.0):
-    - RxSwift (= 6.1.0)
-  - RxSwift (6.1.0)
+  - Alamofire (5.4.3)
+  - CleanJSON (1.0.8)
+  - Differentiator (4.0.1)
+  - HandyJSON (5.0.2)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (6.0.1)
+  - MJRefresh (3.5.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.2)
   - SnapKit (5.0.0)
   - SwiftyJSON (5.0.0)
+  - URLNavigator (2.3.0)
 
 DEPENDENCIES:
-  - Alamofire (= 4.9.0)
-  - AlamofireImage (= 3.6.0)
-  - HandyJSON (= 5.0.0)
-  - ObjectMapper (~> 3.5.1)
-  - RealmSwift (= 4.1.0)
-  - RxCocoa (= 6.1.0)
-  - RxSwift (= 6.1.0)
+  - Alamofire (~> 5.4.0)
+  - CleanJSON (~> 1.0.8)
+  - HandyJSON
+  - IQKeyboardManagerSwift (~> 6.5.6)
+  - Kingfisher (~> 6.0.1)
+  - MJRefresh
+  - Moya/RxSwift (~> 14.0.0)
+  - PromiseKit (~> 6.13.1)
+  - RxCocoa (~> 5.1.1)
+  - RxDataSources (~> 4.0.1)
+  - RxSwift (~> 5.1.1)
   - SnapKit (= 5.0.0)
   - SwiftyJSON (= 5.0.0)
+  - URLNavigator (~> 2.3.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
-    - AlamofireImage
+    - CleanJSON
+    - Differentiator
     - HandyJSON
-    - ObjectMapper
-    - Realm
-    - RealmSwift
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - PromiseKit
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
     - SnapKit
     - SwiftyJSON
+    - URLNavigator
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
-  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
-  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  Realm: 5d1453468eca02c901c50b8a356f4a98a15b57aa
-  RealmSwift: 1d238caa5c64a590c669beef1a7e858a6cf55a1c
-  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
-  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
-  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  CleanJSON: 7cc2fbb8f3face17e80a25a2266199ad31002bfc
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: adde87a4f74f6a3845395769354efff593581740
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 450aa5bc8eff575e00d32f6bbcee257639f2528b
+PODFILE CHECKSUM: ac1b791d13c17f7a05169bcbeecb78c30020af35
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1

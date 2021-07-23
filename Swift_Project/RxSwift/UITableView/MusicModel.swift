@@ -19,3 +19,13 @@ struct MusicModel {
         self.singer = singer
     }
 }
+
+struct MusicSectionModel {
+    var area: String
+    var bgColor: UIColor
+    
+    init(area: String, bgColor: UIColor) {
+        self.area = area
+        self.bgColor = bgColor
+    }
+}

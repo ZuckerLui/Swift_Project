@@ -6,13 +6,13 @@
 //  Copyright © 2020 lvzheng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface UIControl (Category)
-@property (nonatomic, assign) NSTimeInterval acceptEventInterval;
-@property (nonatomic, assign) BOOL ignoreEvent;
-@end
-
-NS_ASSUME_NONNULL_END
+//#import <UIKit/UIKit.h>
+//
+//NS_ASSUME_NONNULL_BEGIN
+//
+//@interface UIControl (Category)
+//@property (nonatomic, assign) NSTimeInterval acceptEventInterval;
+//@property (nonatomic, assign) BOOL ignoreEvent;
+//@end
+//
+//NS_ASSUME_NONNULL_END

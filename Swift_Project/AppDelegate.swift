@@ -7,17 +7,24 @@
 //
 
 import UIKit
+import URLNavigator
 
 @available(iOS 13.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
-
+    private var navigator: NavigatorType! // 导航类型，一个协议
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        let navigator = Navigator()
+        self.navigator = navigator
+        // Initialize navigation map
+        NavigationMap.initialize(navigator: navigator)
+        
         self.setFirstScreen()
+        
         return true
     }
 
@@ -45,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setFirstScreen() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = LoginViewController()
+        window?.rootViewController = LoginViewController.init(navigator: navigator)
         window?.makeKeyAndVisible()
     }
 }

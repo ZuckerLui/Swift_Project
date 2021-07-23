@@ -18,6 +18,7 @@ class PageView: UIScrollView, UITableViewDelegate, UITableViewDataSource {
     var subCanScroll: Bool = false
     var scrollBlock: scrollBlock?
     var fingerIsTouch = false
+    var clickCellBlock: ((_ indexPath: IndexPath) -> Void)?
     
     
     convenience init(frame: CGRect, count: Int) {
@@ -71,6 +72,12 @@ extension PageView {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let block = clickCellBlock {
+            block(indexPath)
+        }
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

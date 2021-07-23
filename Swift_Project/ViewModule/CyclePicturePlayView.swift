@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AlamofireImage
 
 let CyclePictureCellIdentifier = "CyclePictureCellIdentifier"
 
@@ -100,7 +99,7 @@ class CyclePictureViewCell: UICollectionViewCell {
     }
     
     func displayImage(image: String) {
-        imageView.af_setImage(withURL: URL(string: image)!, placeholderImage: UIImage(named: "icon_tabbar_me_nor"), filter: nil, progress: nil, progressQueue: DispatchQueue.global(), imageTransition: .noTransition, runImageTransitionIfCached: true, completion: nil)
+//        imageView.af_setImage(withURL: URL(string: image)!, placeholderImage: UIImage(named: "icon_tabbar_me_nor"), filter: nil, progress: nil, progressQueue: DispatchQueue.global(), imageTransition: .noTransition, runImageTransitionIfCached: true, completion: nil)
     }
     
     required init?(coder: NSCoder) {

@@ -116,7 +116,7 @@ extension LoginViewController {
         
         // 用户名
         userNameTF = LoginTextFieldView(frame: .zero, placeholder: "请输入用户名", isSecureTextEntry: false, keyboardType: .namePhonePad)
-        userNameTF.textField.text = "jimitest"
+        userNameTF.textField.text = ""
         self.view.addSubview(userNameTF!)
         
         userNameValidLabel.font = UIFont.systemFont(ofSize: 12)
@@ -127,7 +127,7 @@ extension LoginViewController {
         
         // 密码
         passwordTF = LoginTextFieldView(frame: .zero, placeholder: "请输入密码", isSecureTextEntry: true, keyboardType: .default)
-        passwordTF.textField.text = "jimi123"
+        passwordTF.textField.text = ""
         self.view.addSubview(passwordTF!)
         
         passwordValidLabel.font = UIFont.systemFont(ofSize: 12)

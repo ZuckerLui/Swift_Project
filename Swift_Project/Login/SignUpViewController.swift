@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  Swift_Project
 //
-//  Created by jimi01 on 2021/3/31.
+//  Created by lz on 2021/3/31.
 //  Copyright © 2021 lvzheng. All rights reserved.
 //
 

@@ -19,9 +19,9 @@ extension UserServerAPI: NetTargetType {
     var path: String {
         switch self {
         case .login:
-            return "/reg"
+            return ""
         case .logout:
-            return "loginOut"
+            return ""
         }
     }
     
@@ -29,14 +29,6 @@ extension UserServerAPI: NetTargetType {
         switch self {
         case .login(let account, let password, _):
             let param = [
-                "editionType": "1",
-                "ver": "4",
-                "method": "login",
-                "timeZones": "",
-                "language": "zh",
-                "appType": "0",
-                "clientId": "0",
-                "mobileType": "3",
                 "account": ParamsEncryption.encryptUseDES(account),
                 "password": ParamsEncryption.encryptUseDES(password)
             ]

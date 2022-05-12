@@ -2,7 +2,7 @@
 //  ParamsEncryption.m
 //  Swift_Project
 //
-//  Created by jimi01 on 2021/4/30.
+//  Created by lz on 2021/4/30.
 //  Copyright © 2021 lvzheng. All rights reserved.
 //
 
@@ -70,7 +70,7 @@
 // DES加密
 +(NSString *)encryptUseDES:(NSString *)clearText
 {
-    NSString *key = @"JiMiTrackSolid";
+    NSString *key = @"DESkeyAny";
     NSString *ciphertext = nil;
     NSData *textData = [clearText dataUsingEncoding:NSUTF8StringEncoding];
     NSUInteger dataLength = [textData length];

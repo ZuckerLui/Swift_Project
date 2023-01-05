@@ -41,9 +41,6 @@ class CTabBarViewController: UITabBarController {
             self.addViewController(childViewController: MeViewController(), title: "我的", image: UIImage(named: imageArray[1])!, selectImage: UIImage(named: selectImageArray[1])!, index: 1)
             self.addViewController(childViewController: KnowledgeModelViewController(), title: "Module", image: UIImage(named: imageArray[2])!, selectImage: UIImage(named: selectImageArray[2])!, index: 2)
         }
-    
-    
-    
 
         func addViewController(childViewController: UIViewController, title: String, image: UIImage, selectImage: UIImage, index: Int) {
             let nav = CNavigationViewController(rootViewController: childViewController)
